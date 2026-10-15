@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Preparedness</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navigation -->
+    <header class="navbar" id="home">
+        <a href="#home" class="brand">
+            <span class="brand-icon">🛡️</span>
+            <span>
+                <strong>Disaster Preparedness</strong>
+                <small>Be Prepared, Stay Safe</small>
+            </span>
+        </a>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#disasters">Safety Tips</a>
+            <a href="#contacts">Emergency Contacts</a>
+            <a href="#checklist">Checklist</a>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <span class="tagline">SAFETY STARTS WITH PREPARATION</span>
+
+            <h1>Prepare Today.<br>
+                <span>Stay Safe Tomorrow.</span>
+            </h1>
+
+            <p>
+                Learn how to prepare for floods, fires and earthquakes.
+                Find emergency contacts and build your personal
+                emergency kit with confidence.
+            </p>
+
+            <a href="#disasters" class="primary-link">
+                Explore Safety Tips →
+            </a>
+
+            <div class="hero-note">
+                ✓ Awareness &nbsp; ✓ Preparation &nbsp; ✓ Safety
+            </div>
+        </div>
+
+        <div class="hero-illustration">
+            <div class="shield">🛡️</div>
+            <h2>Your Safety Matters</h2>
+            <p>A little preparation can make a big difference.</p>
+        </div>
+    </section>
+
+    <main>
+
+        <!-- Introduction -->
+        <section class="intro">
+            <div>
+                <span class="section-label">BE READY</span>
+                <h2>Welcome to Disaster Preparedness</h2>
+                <p>
+                    Disasters can happen unexpectedly. Knowing what to do
+                    before, during and after an emergency helps people
+                    make safer decisions and protect their families.
+                </p>
+            </div>
+            <div class="intro-icon">🏠</div>
+        </section>
+
+        <!-- Disaster Safety Cards -->
+        <section class="content-section" id="disasters">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">LEARN & PREPARE</span>
+                    <h2>Disaster Safety Tips</h2>
+                    <p>Select a disaster to learn important safety steps.</p>
+                </div>
+            </div>
+
+            <div class="disaster-grid">
+
+                <article class="disaster-card flood">
+                    <div class="disaster-icon">🌊</div>
+                    <span class="category">NATURAL DISASTER</span>
+                    <h3>Flood</h3>
+                    <p>Learn how to stay safe during floods and avoid dangerous water.</p>
+                    <button onclick="showSafety('flood')">
+                        View Safety Tips <span>→</span>
+                    </button>
+                </article>
+
+                <article class="disaster-card fire">
+                    <div class="disaster-icon">🔥</div>
+                    <span class="category">FIRE EMERGENCY</span>
+                    <h3>Fire</h3>
+                    <p>Understand safe evacuation and what to do if a fire occurs.</p>
+                    <button onclick="showSafety('fire')">
+                        View Safety Tips <span>→</span>
+                    </button>
+                </article>
+
+                <article class="disaster-card earthquake">
+                    <div class="disaster-icon">🏚️</div>
+                    <span class="category">NATURAL DISASTER</span>
+                    <h3>Earthquake</h3>
+                    <p>Learn how to protect yourself during ground shaking.</p>
+                    <button onclick="showSafety('earthquake')">
+                        View Safety Tips <span>→</span>
+                    </button>
+                </article>
+
+            </div>
+
+            <div id="safetyInfo" aria-live="polite">
+                <div class="info-icon">💡</div>
+                <div>
+                    <h3>Safety Information</h3>
+                    <p>Select one of the disaster cards above to view its safety tips.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Emergency Contacts -->
+        <section class="content-section" id="contacts">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">IMPORTANT INFORMATION</span>
+                    <h2>Emergency Contacts</h2>
+                    <p>Important emergency numbers in India.</p>
+                </div>
+                <div class="heading-icon">📞</div>
+            </div>
+
+            <div class="contact-grid">
+                <article class="contact-card">
+                    <div class="contact-icon emergency-icon">☎️</div>
+                    <div class="contact-details">
+                        <h3>Emergency Helpline</h3>
+                        <p>Emergency assistance</p>
+                    </div>
+                    <a href="tel:112" class="contact-number">112</a>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-icon fire-icon">🔥</div>
+                    <div class="contact-details">
+                        <h3>Fire and Rescue</h3>
+                        <p>Fire emergency assistance</p>
+                    </div>
+                    <a href="tel:101" class="contact-number">101</a>
+                </article>
+
+                <article class="contact-card">
+                    <div class="contact-icon ambulance-icon">✚</div>
+                    <div class="contact-details">
+                        <h3>Ambulance</h3>
+                        <p>Medical emergency</p>
+                    </div>
+                    <a href="tel:108" class="contact-number">108</a>
+                </article>
+            </div>
+
+            <p class="contact-note">
+                Note: Contact availability may vary by location.
+                Verify local emergency information before relying on it.
+            </p>
+        </section>
+
+        <!-- Personal Checklist -->
+        <section class="content-section" id="checklist">
+            <div class="section-heading">
+                <div>
+                    <span class="section-label">YOUR EMERGENCY KIT</span>
+                    <h2>Personal Preparedness Checklist</h2>
+                    <p>Tick the items you have prepared.</p>
+                </div>
+                <div class="heading-icon">✅</div>
+            </div>
+
+            <div class="checklist-layout">
+                <div class="checklist-items">
+                    <label class="check-item">
+                        <input type="checkbox" class="kitItem">
+                        <span class="item-icon">💧</span>
+                        Drinking water
+                    </label>
+
+                    <label class="check-item">
+                        <input type="checkbox" class="kitItem">
+                        <span class="item-icon">🩹</span>
+                        First-aid kit
+                    </label>
+
+                    <label class="check-item">
+                        <input type="checkbox" class="kitItem">
+                        <span class="item-icon">🔦</span>
+                        Torch and batteries
+                    </label>
+
+                    <label class="check-item">
+                        <input type="checkbox" class="kitItem">
+                        <span class="item-icon">💊</span>
+                        Essential medicines
+                    </label>
+
+                    <label class="check-item">
+                        <input type="checkbox" class="kitItem">
+                        <span class="item-icon">🥫</span>
+                        Emergency food
+                    </label>
+
+                    <label class="check-item">
+                        <input type="checkbox" class="kitItem">
+                        <span class="item-icon">📄</span>
+                        Important documents
+                    </label>
+                </div>
+
+                <div class="progress-panel">
+                    <div class="progress-circle">✓</div>
+                    <h3>Your Readiness</h3>
+                    <p id="progressText">0 of 6 items prepared</p>
+
+                    <div class="progress-bar">
+                        <div id="progressFill"></div>
+                    </div>
+
+                    <button onclick="checkItems()" class="check-button">
+                        Check My Preparedness
+                    </button>
+
+                    <p id="result" aria-live="polite">
+                        Start preparing your emergency kit today.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-brand">🛡️ Disaster Preparedness</div>
+        <p>Safety • Awareness • Preparedness</p>
+        <p class="footer-small">Stay informed. Stay prepared. Stay safe.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
